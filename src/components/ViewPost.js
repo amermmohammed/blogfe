@@ -29,7 +29,7 @@ class ViewPost extends React.Component{
     onSubmit(e){
         e.preventDefault();
         let data = { content: this.state.comment };
-        axios.post('/api/comments/'+this.props.match.params.id, data)
+        axios.post('https://amersblog.herokuapp.com/api/comments/'+this.props.match.params.id, data)
         .then(res => {
              let post  = this.state.post;
              post.comments.push({
@@ -51,7 +51,7 @@ class ViewPost extends React.Component{
     }
 
     deletePost(){
-        axios.delete('/api/posts/'+this.state.post._id)
+        axios.delete('https://amersblog.herokuapp.com/api/posts/'+this.state.post._id)
         .then(res => {
             this.props.history.push('/');
         })
@@ -59,7 +59,7 @@ class ViewPost extends React.Component{
 
     componentDidMount(){
         let postId = this.props.match.params.id;
-        axios.get('/api/posts/'+postId)
+        axios.get('https://amersblog.herokuapp.com/api/posts/'+postId)
         .then(res => {
             this.setState({
                 post: res.data,
@@ -78,7 +78,7 @@ class ViewPost extends React.Component{
         if(localStorage.getItem('token') && localStorage.getItem('_id') === this.state.post.author._id){
             return(
                 <span>
-                    <Link to={'/post/edit/'+this.state.post._id}>
+                    <Link to={'https://amersblog.herokuapp.com/post/edit/'+this.state.post._id}>
                         <button>Edit</button>
                     </Link>
                     <button onClick={this.deletePost}>Delete</button>

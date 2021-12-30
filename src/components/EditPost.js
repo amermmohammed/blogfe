@@ -7,7 +7,7 @@ class EditPost extends React.Component{
     constructor(props){
         super(props);
         if(!localStorage.getItem('token')){
-            this.props.history.push('/login');
+            this.props.history.push('https://amersblog.herokuapp.com/login');
         }
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeContent = this.onChangeContent.bind(this);
@@ -41,7 +41,7 @@ class EditPost extends React.Component{
             title: this.state.title,
             content: this.state.content
         };
-        axios.put('/api/posts/'+this.props.match.params.id, data)
+        axios.put('https://amersblog.herokuapp.com/api/posts/'+this.props.match.params.id, data)
         .then(res => {
             this.props.history.push('/');
         })
@@ -53,7 +53,7 @@ class EditPost extends React.Component{
     }
 
     componentDidMount(){
-        axios.get('/api/posts/'+this.props.match.params.id)
+        axios.get('https://amersblog.herokuapp.com/api/posts/'+this.props.match.params.id)
         .then(res => {
              this.setState({
                  title: res.data.title,

@@ -26,11 +26,11 @@ class App extends Component {
             <div>
               <Switch>
                 <Route exact path='/' component={Home}/>
-                <Route  path='/Login' component={Login}/>
-                <Route  path='/Register' component={Register}/>
-                <Route  path='/post/create' component={CreatePost}/>
-                <Route  path='/post/view/:id' component={ViewPost}/>
-                <Route  path='/post/edit/:id' component={EditPost}/>  
+                <Route  path='https://amersblog.herokuapp.com/Login' component={Login}/>
+                <Route  path='https://amersblog.herokuapp.com/Register' component={Register}/>
+                <Route  path='https://amersblog.herokuapp.com/post/create' component={CreatePost}/>
+                <Route  path='https://amersblog.herokuapp.com/post/view/:id' component={ViewPost}/>
+                <Route  path='https://amersblog.herokuapp.com/post/edit/:id' component={EditPost}/>  
               </Switch>
             </div>
           </div>

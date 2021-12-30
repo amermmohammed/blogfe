@@ -22,13 +22,13 @@ class Header extends React.Component{
                 <div className='navbar'>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='https://amersblog.herokuapp.com/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/post/create'>new Post</Link>
+                        <Link to='https://amersblog.herokuapp.com/post/create'>new Post</Link>
                     </li>
                     <li>
-                        <a href='#Logout' onClick={this.logout}>Logout</a>
+                        <a href='https://amersblog.herokuapp.com/Logout' onClick={this.logout}>Logout</a>
                     </li>
                 </ul>
             </div>
@@ -38,13 +38,13 @@ class Header extends React.Component{
             <div className='navbar'>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='https://amersblog.herokuapp.com/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/Login'>Log in</Link>
+                        <Link to='https://amersblog.herokuapp.com/Login'>Log in</Link>
                     </li>
                     <li>
-                        <Link to='/Register'>Register</Link>
+                        <Link to='https://amersblog.herokuapp.com/Register'>Register</Link>
                     </li>
                 </ul>
             </div>

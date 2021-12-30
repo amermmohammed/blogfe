@@ -48,7 +48,7 @@ class Register extends React.Component{
             email: this.state.email,
             password: this.state.password
         };
-        axios.post('/api/register', data)
+        axios.post('https://amersblog.herokuapp.com/api/register', data)
         .then(res => {
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('_id', res.data._id);

@@ -20,7 +20,7 @@ class Home extends React.Component{
     }
 
     fetchPosts(){
-        axios.get('/api/posts')
+        axios.get('https://amersblog.herokuapp.com/api/posts')
         .then(res => {
             this.setState({
                 posts: res.data,
@@ -54,7 +54,7 @@ class Home extends React.Component{
                         <h4>{post.title}</h4>
                         <h6 className="title">{post.author.name}</h6>
                         <p>{post.content.substr(0,120)}</p>
-                        <Link to={"/post/view/"+post._id}>
+                        <Link to={"https://amersblog.herokuapp.com/post/view/"+post._id}>
                             <button className="button-primary button-outline">Read more!</button>
                         </Link>
                         <hr/>

@@ -39,7 +39,7 @@ class CreatePost extends React.Component{
             title: this.state.title,
             content: this.state.content
         };
-        axios.post('/api/posts', data)
+        axios.post('https://amersblog.herokuapp.com/api/posts', data)
         .then(res => {
             this.props.history.push('/');
         })
